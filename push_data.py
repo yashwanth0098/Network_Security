@@ -36,17 +36,17 @@ class NetworkDataExtract():
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
-    def insert_data_mongodb(self,records,database,collections):
+    def insert_data_mongodb(self,records,database,collection):
         try:
             self.database=database
-            self.collections=collections
+            self.collection=collection
             self.records=records
             
             self.mongo_clients=pymongo.MongoClient(MONGO_DB_URL)
             self.database=self.mongo_clients[self.database]
             
-            self.collections=self.database[self.collections]
-            self.collections.insert_many(self.records)
+            self.collection=self.database[self.collection]
+            self.collection.insert_many(self.records)
             return(len(self.records))
         except Exception as e:
             return NetworkSecurityException(e,sys)
@@ -60,4 +60,4 @@ if __name__=="__main__":
     records=networkobj.csv_to_json_convertor(file_path=FILE_PATH)
     print(records)
     no_of_records=networkobj.insert_data_mongodb(records,DATABASE,Collection)
-    print(no_of_records)
+    print(no_of_records) 
