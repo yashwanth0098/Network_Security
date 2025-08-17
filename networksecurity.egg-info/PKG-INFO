@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: networksecurity
+Version: 0.0.1
+Author: Yashwanth K
+Author-email: yahswanth0098@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: python-dotenv
+Requires-Dist: pymango
+Requires-Dist: certifi
