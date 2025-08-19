@@ -16,10 +16,10 @@ class NetworkSecurityException(Exception):
         return "Error occured in python scriptname [{0}] at line number: [{1}]error message: [{2}]".format(
             self.file_name,self.line_no,str(self.error_message))
     
-if __name__=='__main__':
-    try:
-        logger.logging.info("Enter the try block")
-        a=1/0
-        print("This will not execute",a)
-    except Exception as e:
-        raise NetworkSecurityException(e,sys)
+# if __name__=='__main__':
+#     try:
+#         logger.logging.info("Enter the try block")
+#         a=1/0
+#         print("This will not execute",a)
+#     except Exception as e:
+#         raise NetworkSecurityException(e,sys)
