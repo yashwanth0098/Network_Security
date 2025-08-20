@@ -1,0 +1,21 @@
+[ 2025-08-20 11:44:25,665 ] 15 root - INFO - Intiate the data ingestion
+[ 2025-08-20 11:44:37,952 ] 67 root - INFO - performed train test split on the dataframe
+[ 2025-08-20 11:44:37,952 ] 69 root - INFO - Exited split_data_as_train_test method of Data_ingestion class
+[ 2025-08-20 11:44:37,952 ] 77 root - INFO - Exporting train and test file path.
+[ 2025-08-20 11:44:37,981 ] 83 root - INFO - Exported train and test file path.
+[ 2025-08-20 11:44:37,981 ] 18 root - INFO - Data Ingestion Completed
+[ 2025-08-20 11:44:37,987 ] 21 root - INFO - Intiate the data validation
+[ 2025-08-20 11:44:38,004 ] 32 root - INFO - Required number of columns: 2
+[ 2025-08-20 11:44:38,004 ] 33 root - INFO - Data frame has columns: 31
+[ 2025-08-20 11:44:38,004 ] 83 root - ERROR - Train dataframe does not contain all columns.
+
+[ 2025-08-20 11:44:38,004 ] 32 root - INFO - Required number of columns: 2
+[ 2025-08-20 11:44:38,004 ] 33 root - INFO - Data frame has columns: 31
+[ 2025-08-20 11:44:38,004 ] 87 root - ERROR - Test dataframe does not contain all columns.
+
+[ 2025-08-20 11:44:38,105 ] 23 root - INFO - Data Validation Completed
+[ 2025-08-20 11:44:38,105 ] 27 root - INFO - Intiate the data transformation
+[ 2025-08-20 11:44:38,105 ] 61 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2025-08-20 11:44:38,105 ] 64 root - INFO - Starting data transformation
+[ 2025-08-20 11:44:38,123 ] 48 root - INFO - Entered get_data_transformer_object method of DataTransformation class
+[ 2025-08-20 11:44:38,123 ] 52 root - INFO - Imputer object created with parameters: {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
