@@ -4,12 +4,12 @@ from networksecurity.logging import logger
 
 class NetworkSecurityException(Exception):
     def __init__(self, error_message,error_details:sys):
-        
+
         self.error_message = error_message
-        _,_,exc_tb=error_details.exc_info()
+        _,_,exc_tb=error_details.exc_info() # exc_info returns (type,value,traceback)
         
-        self.line_no = exc_tb.tb_lineno
-        self.file_name = exc_tb.tb_frame.f_code.co_filename
+        self.line_no = exc_tb.tb_lineno # returns the current line number
+        self.file_name = exc_tb.tb_frame.f_code.co_filename # returns the current file name
         
         
     def __str__(self):

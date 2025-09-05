@@ -1,0 +1,30 @@
+[ 2025-09-05 18:07:25,593 ] 17 root - INFO - Intiate the data ingestion
+[ 2025-09-05 18:07:37,663 ] 67 root - INFO - performed train test split on the dataframe
+[ 2025-09-05 18:07:37,663 ] 69 root - INFO - Exited split_data_as_train_test method of Data_ingestion class
+[ 2025-09-05 18:07:37,663 ] 78 root - INFO - Exporting train and test file path.
+[ 2025-09-05 18:07:37,696 ] 84 root - INFO - Exported train and test file path.
+[ 2025-09-05 18:07:37,696 ] 20 root - INFO - Data Ingestion Completed
+[ 2025-09-05 18:07:37,702 ] 24 root - INFO - Intiate the data validation
+[ 2025-09-05 18:07:37,720 ] 32 root - INFO - Required number of columns: 2
+[ 2025-09-05 18:07:37,727 ] 33 root - INFO - Data frame has columns: 31
+[ 2025-09-05 18:07:37,727 ] 84 root - ERROR - Train dataframe does not contain all columns.
+
+[ 2025-09-05 18:07:37,727 ] 32 root - INFO - Required number of columns: 2
+[ 2025-09-05 18:07:37,727 ] 33 root - INFO - Data frame has columns: 31
+[ 2025-09-05 18:07:37,727 ] 88 root - ERROR - Test dataframe does not contain all columns.
+
+[ 2025-09-05 18:07:37,831 ] 26 root - INFO - Data Validation Completed
+[ 2025-09-05 18:07:37,831 ] 31 root - INFO - Intiate the data transformation
+[ 2025-09-05 18:07:37,831 ] 62 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2025-09-05 18:07:37,831 ] 65 root - INFO - Starting data transformation
+[ 2025-09-05 18:07:37,848 ] 48 root - INFO - Entered get_data_transformer_object method of DataTransformation class
+[ 2025-09-05 18:07:37,849 ] 52 root - INFO - Imputer object created with parameters: {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-09-05 18:07:37,862 ] 53 root - INFO - Entered the save_object method of Mainutils class
+[ 2025-09-05 18:07:37,864 ] 57 root - INFO - Exited the save_object method of  Mainutils
+[ 2025-09-05 18:07:37,864 ] 53 root - INFO - Entered the save_object method of Mainutils class
+[ 2025-09-05 18:07:37,866 ] 57 root - INFO - Exited the save_object method of  Mainutils
+[ 2025-09-05 18:07:37,866 ] 34 root - INFO - Data Transformation Completed
+[ 2025-09-05 18:07:37,866 ] 36 root - INFO - Model Training Started
+[ 2025-09-05 18:08:34,474 ] 53 root - INFO - Entered the save_object method of Mainutils class
+[ 2025-09-05 18:08:34,506 ] 57 root - INFO - Exited the save_object method of  Mainutils
+[ 2025-09-05 18:08:34,507 ] 53 root - INFO - Entered the save_object method of Mainutils class

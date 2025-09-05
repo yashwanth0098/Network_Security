@@ -4,12 +4,14 @@ python-dotenv
 pymongo
 certifi 
 scikit-learn
-dill
+# dill
 pyaml
+dagshub
+fastapi
+uvicorn
+python-multipart
+mlflow
 
-
-
-
-# -e .
+## -e .
 
 

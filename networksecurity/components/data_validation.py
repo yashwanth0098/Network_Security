@@ -19,10 +19,10 @@ class DataValidation:
         except Exception as e:
             raise NetworkSecurityException(e,sys)
 
-    @staticmethod
+    @staticmethod 
     def read_data(file_path)->pd.DataFrame:
         try:
-            return pd.read_csv(file_path)
+            return pd.read_csv(file_path) ## file path from data ingestion
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
@@ -52,7 +52,8 @@ class DataValidation:
                 else:
                     is_found=True
                     status=False
-                report.update({column:{"p_value":float(is_same_dist.pvalue),"drift_status":is_found}}) # update the report dictionary with the column name and the is_same_distribution value and the p_valueis_same_dist.pvalue,"is_same_distribution":is_found}})
+                report.update({column:{"p_value":float(is_same_dist.pvalue),"drift_status":is_found}}) # update the report dictionary with the column name and 
+                # the is_same_distribution value and the p_valueis_same_dist.pvalue,"is_same_distribution":is_found}})
             drift_report_file_path=self.data_validation_config.drift_report_file_path
             
             ## create directory 

@@ -52,9 +52,9 @@ class DataIngestion:
     def export_data_into_feature_store(self,dataframe:pd.DataFrame):
         try:
             feature_store_file_path=self.data_ingestion_config.feature_store_file_path
-            dir_path=os.path.dirname(feature_store_file_path)
-            os.makedirs(dir_path,exist_ok=True)
-            dataframe.to_csv(feature_store_file_path,index=False,header=True)
+            dir_path=os.path.dirname(feature_store_file_path) # Extract the directory path (parent folder) from the feature store file path
+            os.makedirs(dir_path,exist_ok=True) # Create the directory (and parent directories if needed); do nothing if it already exists
+            dataframe.to_csv(feature_store_file_path,index=False,header=True) # Save the DataFrame to the feature store file path
             return dataframe
     
         except Exception as e:
@@ -69,9 +69,10 @@ class DataIngestion:
             logging.info(
                 "Exited split_data_as_train_test method of Data_ingestion class"
             )
+            # Extract the directory path (parent folder) from the training file path
+            dir_path=os.path.dirname(self.data_ingestion_config.training_file_path) 
             
-            dir_path=os.path.dirname(self.data_ingestion_config.training_file_path)
-            
+            # Create the directory (and parent directories if needed); do nothing if it already exists
             os.makedirs(dir_path,exist_ok=True)
             
             logging.info(f"Exporting train and test file path.")
