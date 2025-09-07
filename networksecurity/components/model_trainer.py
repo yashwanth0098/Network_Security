@@ -21,6 +21,16 @@ from sklearn.ensemble import (
 
 import mlflow
 
+
+
+import dagshub
+dagshub.init(repo_owner='yashwanth0098', repo_name='Network_Security', mlflow=True)
+
+# import mlflow
+# with mlflow.start_run():
+#   mlflow.log_param('parameter name', 'value')
+#   mlflow.log_metric('metric name', 1)
+
 class ModelTrainer:
     def __init__(self, model_trainer_config: ModelTrainerConfig, data_transformation_artifact: DataTransformationArtifact):
         try:
@@ -104,6 +114,8 @@ class ModelTrainer:
             # Save trained model (with preprocessing)
             Network_Model = NetworkModel(preprocessor=preprocessor, model=best_model)
             save_object(self.model_trainer_config.trained_model_file_path, obj=Network_Model)
+            
+            save_object('final_model/model.pkl', best_model)
 
             # Save final model in Artifacts folder
             final_model_path = os.path.join("Artifacts", "final_model.pkl")
