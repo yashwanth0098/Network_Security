@@ -6,9 +6,7 @@ on:
     paths-ignore:
       - 'README.md'
 
-permissions:
-  id-token: write
-  contents: read
+
 
 jobs:
   integration:
